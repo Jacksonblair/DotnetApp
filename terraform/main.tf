@@ -6,11 +6,6 @@ provider "azurerm" {
   subscription_id = var.subscription_id
 }
 
-resource "azurerm_resource_group" "rg" {
-  name     = "myResourceGroup"
-  location = "East US"
-}
-
 resource "azurerm_virtual_network" "vnet" {
   name                = "myVnet"
   address_space       = ["10.0.0.0/16"]

@@ -22,3 +22,8 @@ variable "subscription_id" {
   sensitive   = true
 }
 
+variable "location" {
+  type        = string
+  description = "The Azure Region where the resources will be created"
+  default     = "Australia East"
+}

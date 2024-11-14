@@ -34,7 +34,7 @@ jobs:
         working-directory: terraform/
 
       - name: Terraform Plan
-        run: terraform plan -out=tfplan
+        run: terraform plan -out=tfplan \
           -var "client_id=${{ secrets.ARM_CLIENT_ID }}" \
           -var "client_secret=${{ secrets.ARM_CLIENT_SECRET }}" \
           -var "tenant_id=${{ secrets.ARM_TENANT_ID }}" \
